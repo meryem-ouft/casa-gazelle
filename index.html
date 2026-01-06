@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Gazelle | Jellaba de Luxe</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img src="logo.png" alt="Casa Gazelle Logo">
+            </div>
+        </div>
+        <h1>Casa Gazelle</h1>
+        <div class="location">Palafrugell • España</div>
+    </header>
+
+
+
+    <section class="container">
+        <h2 class="section-title">Nos Créations</h2>
+        
+        <div class="models-grid">
+            <div class="model-card">
+                <div class="slider">
+                    <button class="arrow prev">&#10094;</button>
+
+                    <img src="model1-1.jpeg" class="active">
+                    <img src="model1-2.jpeg">
+                    <img src="model1-3.jpeg">
+
+                    <button class="arrow next">&#10095;</button>
+                </div>
+
+                <div class="model-info">
+                    <h3>Jellaba Silk Edition</h3>
+                    <p class="price">Sur Commande</p>
+                </div>
+            </div>
+
+            <div class="model-card">
+                <div class="slider">
+                    <button class="arrow prev">&#10094;</button>
+                    <img src="model2-1.jpeg" class="active">
+                    <img src="model2-2.jpeg">
+                    <img src="model2-3.jpeg">
+                    <button class="arrow next">&#10095;</button>
+                </div>
+
+                <div class="model-info">
+                    <h3>Kaftan Rose Perlé</h3>
+                    <p class="price">Sur Commande</p>
+                </div>
+            </div>
+
+            <div class="model-card">
+                <div class="slider">
+                    <button class="arrow prev">&#10094;</button>
+                    <img src="model3-1.jpeg" class="active">
+                    <img src="model3-2.jpeg">
+                    <img src="model3-3.jpeg">
+                    <button class="arrow next">&#10095;</button>
+                </div>
+                <div class="model-info">
+                    <h3>L'Élégance Chocolat</h3>
+                    <p class="price">Sur Commande</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="container">
+            <h2>
+                <p style="max-width:600px;margin:20px auto;">
+    Chaque création Casa Gazelle est pensée pour sublimer la femme,
+    entre tradition marocaine et élégance contemporaine.
+</p>
+
+<a href="https://wa.me/34643561946" class="hero-btn">
+    Commander sur WhatsApp
+</a>
+            </h2>
+        </div>
+    </section>
+    <footer>
+        <div class="social-links">
+            <a class="insta" href="https://instagram.com/casa_gazelle" target="_blank">INSTAGRAM</a>
+            <a class="what" href="https://wa.me/34643561946" target="_blank">WHATSAPP</a>
+        </div>
+        <div class="contact-info" style="color: black;">
+            <p >📍 Palafrugell, España</p>
+            <p>© 2024 Casa Gazelle. Créations Artisanales.</p>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.querySelectorAll('.slider').forEach(slider => {
+
+        let images = slider.querySelectorAll('img');
+        let prev = slider.querySelector('.prev');
+        let next = slider.querySelector('.next');
+        let index = 0;
+
+        function showImage(){
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        }
+
+        next.onclick = () => {
+            index++;
+            if(index >= images.length){
+                index = 0;
+            }
+            showImage();
+        }
+
+        prev.onclick = () => {
+            index--;
+            if(index < 0){
+                index = images.length - 1;
+            }
+            showImage();
+        }
+
+    });
+    </script>
+</body>
+</html>
