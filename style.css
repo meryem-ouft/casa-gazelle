@@ -1,56 +1,40 @@
-
+/* RESET */
 * {
-     margin: 0; 
-     padding: 0; 
-     box-sizing: border-box;
- }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* BODY */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color:antiquewhite;
-    color:#000000;
+    background-color: antiquewhite;
+    color: #000;
     line-height: 1.6;
 }
 
-        /* --- Header & Logo --- */
+/* ================= HEADER ================= */
 header {
     padding: 40px 20px;
     text-align: center;
-    background-color:#744d2e;
+    background-color: #744d2e;
 }
 
 .profile-container {
-    width: 200px;    
+    width: 200px;
     height: 200px;
     margin: 0 auto 20px;
-    border: 2px solid var(--marron);
     border-radius: 50%;
     padding: 5px;
-    position: relative;
-}
-
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: var(--pink);
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
+.profile-photo,
 .profile-photo img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     object-fit: cover;
-}
-        /* Symbolique de la Gazelle (Placeholder) */
-.profile-photo::after {
-    content: 'CG'; /* Smia d l-brand */
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--marron);
 }
 
 h1 {
@@ -58,24 +42,21 @@ h1 {
     font-size: 38px;
     letter-spacing: 6px;
     text-transform: uppercase;
-    margin-bottom: 5px;
-    color:antiquewhite
+    color: antiquewhite;
 }
+
 .location {
     font-size: 13px;
     letter-spacing: 3px;
-    color:rgb(253, 253, 253);
+    color: #fff;
     text-transform: uppercase;
-    line-height-step: initial;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
-        /* --- Hero Section --- */
+/* ================= HERO ================= */
 .hero {
-    background-color:#ecd8e4b9;
+    background-color: #ecd8e4b9;
     padding: 60px 20px;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .hero h2 {
@@ -83,253 +64,175 @@ h1 {
     font-size: 30px;
     font-style: italic;
     max-width: 600px;
-    margin: 0 auto 20px;
+    margin: auto;
 }
 
-        /* --- Gallery Section (Les Modèles) --- */
-.container { 
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px; }
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 38px;
+    background: #9b7741;
+    color: #000;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-    
+.hero-btn:hover {
+    background: #68a14e;
+}
+
+/* ================= CONTENT ================= */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
 
 .section-title {
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    margin: 20px;
-    position: relative;
+    margin: 30px 0;
 }
 
+section {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
 
+/* ================= GRID ================= */
 .models-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-bottom: 80px;
-        }
+}
 
 .model-card {
-    background:#f7c3dfc2;
-    border-bottom: 3px solid var(--pink);
-    transition: transform 0.4s ease;
-    cursor: pointer;
+    background: #f7c3dfc2;
     border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
 .model-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
 }
 
-
 .model-info {
-    padding: 20px 10px;
+    padding: 15px;
     text-align: center;
 }
 
 .model-info h3 {
-    font-size: 16px;
-    text-transform: uppercase;
+    font-size: 15px;
     letter-spacing: 2px;
-    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
-.price {
-    font-weight: bold;
-    color: rgb(29, 31, 30);
-}
-
-        /* --- Contact / Footer --- */
-        footer {
-            background-color:#88603d;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-.social-links { 
-    margin-bottom: 30px;
-    border-radius: 20px; 
-}
-        .social-links a {
-            color:antiquewhite;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 14px;
-            border: 1px solid ;
-            
-            padding: 10px 20px;
-            transition: 0.3s;
-            border-radius: 20px; 
-        }
-
-
-.insta{
-    background:#d867d2d5 ;
-    color:#000000
-}
-.what{
-    background: #24ca1fc2;
-    color:#000000
-}
-
-        .contact-info p {
-            font-size: 14px;
-            opacity: 1;
-            margin-bottom: 10px;
-            font-size: medium;
-
-        }
-.hero-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 38px;
-    background:#9b7741;
-    color:#000000;
-    border-radius: 40px;
-    text-decoration:none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-}
-
-.hero-btn:hover {
-    background:#68a14e;
-}
-section{
-    border-radius:  20px;
-    padding: 20px;
-    margin: 20px;
-
-}
-
-
-
-
-
-
-    /*uhyhiunj*/
-.slider{
+/* ================= SLIDER (FIX FINAL) ================= */
+.slider {
     position: relative;
     width: 100%;
-    height: 450px;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
-    border-radius: 10px;
 }
 
-.slider img{
+.slider img {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease;
 }
 
-.slider img.active{
+.slider img.active {
     opacity: 1;
 }
 
-/* السهام */
-.arrow{
+/* ARROWS */
+.arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.6);
-    color: white;
+    color: #fff;
     border: none;
-    font-size: 30px;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    z-index: 20;
+    width: 42px;
+    height: 42px;
+    font-size: 26px;
     border-radius: 50%;
-
+    cursor: pointer;
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-/* PC */
-.slider:hover .arrow,
-.slider:focus-within .arrow{
-    opacity: 1;
-    pointer-events: auto;
-}
-.arrow:focus{
-    outline: none;
+    transition: 0.3s;
 }
 
-.slider:hover .arrow{
+.slider:hover .arrow {
     opacity: 1;
-    pointer-events: auto;
 }
-.prev{ left: 10px; }
-.next{ right: 10px; }
-/* =====================
-   RESPONSIVE - MOBILE
-===================== */
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #88603d;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.insta { background: #d867d2; }
+.what { background: #24ca1f; color: #000; }
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
     header {
-        padding: 25px 15px;
+        padding: 20px 10px;
     }
 
     .profile-container {
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
     }
 
     h1 {
-        font-size: 26px;
-        letter-spacing: 3px;
-    }
-
-    .location {
-        font-size: 11px;
+        font-size: 24px;
         letter-spacing: 2px;
     }
 
     .hero h2 {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    section {
+        margin: 8px;
+        padding: 15px;
     }
 
     .section-title {
         font-size: 22px;
-        margin: 15px;
-    }
-
-    .slider {
-        height: 300px; /* بدل 450 */
-    }
-
-    .models-grid {
-        gap: 20px;
     }
 
     .model-info h3 {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .hero-btn {
-        padding: 12px 26px;
+        padding: 12px 24px;
         font-size: 14px;
     }
-
-    footer {
-        padding: 40px 15px;
-    }
-
-    .social-links a {
-        display: inline-block;
-        margin: 10px 5px;
-        font-size: 13px;
-        padding: 8px 16px;
-    }
-}
-.slider {
-    aspect-ratio: 3 / 4;
-    height: auto;
 }
