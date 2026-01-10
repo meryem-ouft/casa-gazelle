@@ -1,20 +1,17 @@
-/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: antiquewhite;
     color: #000;
     line-height: 1.6;
-    border: 5px solid red;
 }
 
-/* ================= HEADER ================= */
 header {
     padding: 40px 20px;
     text-align: center;
@@ -83,7 +80,6 @@ h1 {
     background: #68a14e;
 }
 
-/* ================= CONTENT ================= */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -103,7 +99,6 @@ section {
     margin: 20px;
 }
 
-/* ================= GRID ================= */
 .models-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -132,7 +127,6 @@ section {
     text-transform: uppercase;
 }
 
-/* ================= SLIDER (FIX FINAL) ================= */
 .slider {
     position: relative;
     width: 100%;
@@ -154,7 +148,6 @@ section {
     opacity: 1;
 }
 
-/* ARROWS */
 .arrow {
     position: absolute;
     top: 50%;
@@ -178,7 +171,6 @@ section {
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* ================= FOOTER ================= */
 footer {
     background-color: #88603d;
     padding: 50px 20px;
@@ -198,7 +190,6 @@ footer {
 .insta { background: #d867d2; }
 .what { background: #24ca1f; color: #000; }
 
-/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
     header {
@@ -237,4 +228,5 @@ footer {
         font-size: 14px;
     }
 }
+
 
